@@ -20,5 +20,9 @@ favoriteFood: food
 }; 
 
 console.log(JSON.stringify( obj ))
+
+xhttp.open("POST", " <Await URL Link> ", true);
+xhttp.setRequestHeader("Content-Type", "application/json");
+
 });
 
