@@ -14,5 +14,11 @@ xhttp.onreadystatechange = function() {
     }
 };
 
+var obj = {
+firstName: name,
+favoriteFood: food
+}; 
+
+console.log(JSON.stringify( obj ))
 });
 
