@@ -1,8 +1,8 @@
 const data = document.querySelector("#name");
-
+const food = document.querySelector("#food");
 const but1 = document.querySelector(".press");
 
-but1.addEventListener("onclick", function(event) {
+but1.addEventListener("click", function(event) {
 
     console.log("Click successful!");
 
@@ -15,14 +15,16 @@ xhttp.onreadystatechange = function() {
 };
 
 var obj = {
-firstName: name,
-favoriteFood: food
+firstName: data.value,
+favoriteFood: food.value
 }; 
 
 console.log(JSON.stringify( obj ))
 
-xhttp.open("POST", " <Await URL Link> ", true);
-xhttp.setRequestHeader("Content-Type", "application/json");
+const dataString = (JSON.stringify( obj ));
 
+xhttp.open("POST", "http://100.66.169.122:3000", true);
+xhttp.setRequestHeader("Content-Type", "application/json");
+xhttp.send(dataString);
 });
 
